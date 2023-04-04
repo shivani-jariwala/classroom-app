@@ -1,4 +1,3 @@
-const bcrypt = require("bcrypt");
 const HttpStatus = require("http-status-codes");
 const {generateAuthToken} = require("../../helpers/auth");
 const logger = require("../../log");
@@ -25,7 +24,7 @@ exports.login = async (req, res) => {
         errorMessage: "User not found",
         message: "failure",
       });
-    //compare passwords
+    //compare passwords using bcrypt, but here not signing in so not using bcrypt
     // let passwordMatched = await bcrypt.compare(password, result[0].password)
     // if (!passwordMatched) return res.status(HttpStatus.FORBIDDEN).json({
     //     errorMessage: `Incorrect Password`,
