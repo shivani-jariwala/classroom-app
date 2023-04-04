@@ -1,0 +1,6 @@
+{
+    "jwtSession": {
+        "session": false
+    },
+    "showRequestHeaders": true
+}

@@ -1,0 +1,12 @@
+{
+	"port": 5005,
+	"dbConfig": {
+		"host": "sql12.freesqldatabase.com",
+  		"user": "sql12610928",
+  		"database": "sql12610928",
+  		"password": "2fGigERaDR",
+		"connectionPool": 50
+	},
+    "expiresIn": 31536000,
+    "jwtSecret": "ItAYYMOJmh5x2rLSrCfTDnMfM3POqQjo"
+}
