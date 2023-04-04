@@ -10,7 +10,7 @@ exports.deleteAssignment = async (req, res) => {
     
 
     // if assignment_id is invalid
-    if (!assignment_id || !Number.isInteger(assignment_id)) return res.status(HttpStatus.UNPROCESSABLE_ENTITY).json({
+    if (!assignment_id || !Number.isInteger(parseInt(assignment_id))) return res.status(HttpStatus.UNPROCESSABLE_ENTITY).json({
         errorMessage: "Incorrect assignment id",
         message: "failure",
       });

@@ -4,7 +4,7 @@ const logger = require("../../log");
 
 exports.createAssignment = async (req, res) => {
   try {
-    const { studentIds, description, publishedAt, deadline } = req.body;
+    const { studentIds, description, publishedAt, deadline, id } = req.body;
     const { userId: tutorId, type } = req.user;
     if (!studentIds || !description || !publishedAt || !deadline)
       return res.status(HttpStatus.BAD_REQUEST).json({
@@ -25,6 +25,7 @@ exports.createAssignment = async (req, res) => {
       });
     // if everythings fine then create assignment
     await db.createAssignment(
+      id,
       tutorId,
       studentIds,
       description,
