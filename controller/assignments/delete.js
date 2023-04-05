@@ -1,6 +1,7 @@
 const HttpStatus = require("http-status-codes");
 const db = require("../../db/assignments/delete.js");
 const logger = require("../../log");
+const errors = require('../../helpers/error');
 
 exports.deleteAssignment = async (req, res) => {
   try {

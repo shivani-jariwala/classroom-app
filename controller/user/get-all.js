@@ -1,6 +1,7 @@
 const HttpStatus = require("http-status-codes");
 const db = require("../../db/user/get-all");
 const logger = require("../../log");
+const errors = require('../../helpers/error');
 
 exports.getAllAssignments = async (req, res) => {
   try {

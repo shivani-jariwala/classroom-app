@@ -2,6 +2,7 @@ const HttpStatus = require("http-status-codes");
 const {generateAuthToken} = require("../../helpers/auth");
 const logger = require("../../log");
 const db = require("../../db/auth/login");
+const errors = require('../../helpers/error');
 
 exports.login = async (req, res) => {
   try {

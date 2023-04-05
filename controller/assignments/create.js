@@ -1,6 +1,7 @@
 const HttpStatus = require("http-status-codes");
 const db = require("../../db/assignments/create");
 const logger = require("../../log");
+const errors = require('../../helpers/error');
 
 exports.createAssignment = async (req, res) => {
   try {

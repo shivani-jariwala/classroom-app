@@ -1,6 +1,7 @@
 const HttpStatus = require("http-status-codes");
 const db = require("../../db/user/submit");
 const logger = require("../../log");
+const errors = require('../../helpers/error');
 
 exports.submitAssignment = async (req, res) => {
   try {
